@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Private Portal</title>
+    <style>
+        body { background-color: #0d1117; color: #58a6ff; font-family: sans-serif; display: flex; flex-direction: column; justify-content: center; align-items: center; min-height: 100vh; margin: 0; padding: 20px; }
+        .container { background: #161b22; padding: 30px; border-radius: 15px; border: 1px solid #30363d; text-align: center; width: 280px; margin-bottom: 20px; }
+        input { width: 90%; padding: 12px; margin-bottom: 20px; border-radius: 6px; border: 1px solid #30363d; background: #0d1117; color: white; text-align: center; }
+        button { width: 100%; padding: 12px; border-radius: 6px; border: none; background: #238636; color: white; font-weight: bold; cursor: pointer; }
+        .content { display: none; text-align: left; }
+        a { display: block; color: #58a6ff; text-decoration: none; padding: 10px; border-bottom: 1px solid #30363d; }
+        .public-img { width: 100%; max-width: 340px; border-radius: 15px; border: 2px solid #30363d; margin-bottom: 15px; }
+    </style>
+</head>
+<body>
+
+    <img src="IMG-6e1361eac2220bb190d75b2a05a670f1-V.jpg" class="public-img">
+
+    <div class="container" id="login-box">
+        <h2 style="color:white">ACCESS CODE</h2>
+        <input type="password" id="passCode" placeholder="Enter Code">
+        <button onclick="check()">LOGIN</button>
+    </div>
+
+    <div class="container content" id="secret-content">
+        <h2 style="color:white; text-align:center;">MY FILES</h2>
+        <a href="https://parlanverma.blogspot.com/?m=1">📁 My web 1</a>
+        <a href="https://TikTok.com">🎥 Lesson Video</a>
+        <a href="https://www.facebook.com/share/1E2Y6kayYs/">🎥 ပါးပါး</a>
+        <button onclick="location.reload()" style="margin-top:20px; background:#da3633;">LOGOUT</button>
+    </div>
+
+    <script>
+        function check() {
+            var p = document.getElementById("passCode").value;
+            if (p == "gawgaw4") {
+                document.getElementById("login-box").style.display = "none";
+                document.getElementById("secret-content").style.display = "block";
+            } else {
+                alert("Wrong Code!");
+            }
+        }
+    </script>
+</body>
+</html>
